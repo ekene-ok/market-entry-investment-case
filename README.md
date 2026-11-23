@@ -21,6 +21,15 @@ A delivery platform is considering entering Halifax, St. John's, Moncton, Saint 
 
 The courier cost range comes from the companion [marketplace supply simulation](https://github.com/ekene-ok/marketplace-supply-simulation): a demand-shaped courier schedule costs about $8.18 per order, while a flat schedule costs $12.70. In other words, the operating model decides the investment case.
 
+## Try it yourself
+
+An interactive version ([`app.py`](app.py)) lets you change the key assumptions (market share, courier cost, commission, fees, order frequency and marketing spend), pick which cities to launch, and see the chance of paying back update instantly. Run it locally with:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
 ## Charts
 
 ![Halifax is the only city with a real chance of paying back](charts/01_chance_of_payback_by_city.png)
@@ -98,6 +107,7 @@ For each city and year ([`model/investment_model.py`](model/investment_model.py)
 ## Repository structure
 
 ```
+app.py                     interactive version (Streamlit)
 model/
   assumptions.csv          every input with low, most likely, high and basis
   cities.csv               city populations
