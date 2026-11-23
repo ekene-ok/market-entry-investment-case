@@ -1,5 +1,7 @@
 # Market Entry Investment Case: Should a Delivery Platform Launch in Atlantic Canada?
 
+**[Try the live app](https://ekene-market-entry.streamlit.app/)**: change the assumptions and see the results update.
+
 A five-year investment case for launching a food delivery platform in Atlantic Canada's five largest cities. It sizes each market from public data, builds city-level unit economics, runs 10,000 Monte Carlo simulations to show the range of outcomes, and identifies what has to be true for the launch to pay back.
 
 Built in **Python** (NumPy, pandas). Every assumption lives in one editable file, [`model/assumptions.csv`](model/assumptions.csv), with a low, most likely and high value and its basis.
@@ -23,7 +25,9 @@ The courier cost range comes from the companion [marketplace supply simulation](
 
 ## Try it yourself
 
-An interactive version ([`app.py`](app.py)) lets you change the key assumptions (market share, courier cost, commission, fees, order frequency and marketing spend), pick which cities to launch, and see the chance of paying back update instantly. Run it locally with:
+**Live app: [ekene-market-entry.streamlit.app](https://ekene-market-entry.streamlit.app/)**
+
+An interactive version ([`app.py`](app.py)) lets you change the key assumptions (market share, courier cost, commission, fees, order frequency and marketing spend), pick which cities to launch, and see the chance of paying back update instantly. To run it locally:
 
 ```bash
 pip install -r requirements.txt
