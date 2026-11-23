@@ -1,0 +1,13 @@
+parameter,low,mode,high,unit,basis
+regular_user_share,0.18,0.24,0.30,share of adults,"National: 27.4% order through delivery apps more than once a month (Dalhousie Agri-Food Analytics Lab with Caddle, 2025). Set lower for smaller Atlantic cities."
+orders_per_user_month,2.0,3.0,4.0,orders,"Third-party app users average about 4 orders a month (DoorDash merchant research). Lower mode because regular users include once-a-month orderers."
+avg_order_value,32,38,45,CAD,"$32 average order (Vividata, Fall 2020), adjusted upward for food inflation since 2020."
+adult_share,0.78,0.80,0.82,share of population,"Assumption: share of residents aged 18+, the survey base."
+market_share_year3,0.05,0.10,0.20,share of delivery orders,"Assumption: steady-state share for a new entrant against established platforms."
+merchant_commission,0.18,0.25,0.30,share of food value,"Assumption: typical marketplace commission range."
+consumer_fees,4.0,6.0,8.0,CAD per order,"Assumption: delivery plus service fees paid by the customer."
+courier_cost,7.5,8.2,12.7,CAD per order,"From the marketplace supply simulation: $8.18 per order with a demand-shaped schedule, $12.70 with a flat schedule."
+other_variable_cost,0.04,0.05,0.07,share of food value,"Assumption: payment processing, refunds and support."
+fixed_cost_per_city,300000,400000,600000,CAD per year,"Assumption: local operations, merchant sales and support team for one city."
+shared_team_multiplier,1.3,1.5,1.8,teams,"Assumption: one New Brunswick team covering Moncton, Saint John and Fredericton costs this many single-city teams."
+launch_marketing_per_resident,2.0,4.0,6.0,CAD in year 1,"Assumption: half in year 2, a quarter from year 3."
