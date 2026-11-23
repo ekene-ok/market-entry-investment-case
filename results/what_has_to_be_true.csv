@@ -1,0 +1,5 @@
+condition,share_of_simulations,prob_npv_positive,expected_npv,median_npv
+All simulations,1.0,0.355,-719071,-986700
+Courier cost at or below $9.00 per order,0.411,0.532,514627,196364
+Market share at or above 10% by year 3,0.663,0.463,-85019,-239972
+Both of the above,0.272,0.681,1334568,1076731

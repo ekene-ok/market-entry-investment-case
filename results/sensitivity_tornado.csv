@@ -1,0 +1,13 @@
+input,low,high,npv_at_low,npv_at_high,swing
+market_share_year3,0.05,0.2,-2295680,5627300,7922980
+courier_cost,7.5,12.7,1030016,-4056342,5086358
+merchant_commission,0.18,0.3,-2256554,2203790,4460344
+consumer_fees,4.0,8.0,-1610978,2301605,3912583
+orders_per_user_month,2.0,4.0,-1415349,2105976,3521324
+launch_marketing_per_resident,2.0,6.0,2055493,-1364866,3420358
+regular_user_share,0.18,0.3,-975183,1665810,2640993
+avg_order_value,32.0,45.0,-828461,1714718,2543179
+fixed_cost_per_city,300000.0,600000.0,724392,-412844,1137236
+other_variable_cost,0.04,0.07,717009,-398077,1115086
+adult_share,0.78,0.82,213264,477363,264099
+shared_team_multiplier,1.3,1.8,345314,345314,0

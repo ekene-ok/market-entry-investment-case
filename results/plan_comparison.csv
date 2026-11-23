@@ -1,0 +1,6 @@
+plan,base_case_npv,median_npv,p10_npv,p90_npv,prob_npv_positive,expected_npv
+Halifax only,345314,-986700,-3819656,2747346,0.355,-719071
+Halifax + St. John's,-321225,-2335416,-6478043,3124446,0.274,-1940353
+Halifax + New Brunswick cluster,-342407,-2947661,-8220090,3988619,0.275,-2448739
+"All five, shared New Brunswick team",-1008946,-4282558,-10870021,4364121,0.245,-3670020
+"All five, one team per city",-3283418,-6678706,-13369128,2032098,0.154,-6081950

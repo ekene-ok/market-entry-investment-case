@@ -1,0 +1,3 @@
+plan,expected_npv,median_npv,p10_npv,p90_npv,prob_npv_positive,worst_5pct_avg
+"Halifax, full five-year commitment",-719071,-986700,-3819656,2747346,0.355,-5340801
+"Halifax, staged with year-1 gates",-999353,-1711888,-2380043,1895938,0.185,-2810558

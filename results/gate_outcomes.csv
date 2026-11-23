@@ -1,0 +1,2 @@
+gate_share,gate_courier_cost,wind_down_cost,prob_gates_pass,prob_npv_positive_if_pass,median_npv_if_pass,median_npv_if_exit
+0.1,9.0,250000,0.272,0.681,1076731,-1880866
