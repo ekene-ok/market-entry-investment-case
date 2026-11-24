@@ -25,14 +25,17 @@ b.save(fig, OUT / "01_chance_of_payback_by_city.png")
 
 # Chart 2: what has to be true for Halifax
 w = pd.read_csv(RES / "what_has_to_be_true.csv")
-labels = {"All simulations": "As assumed today", "Courier cost at or below $9.00 per order": "Courier cost $9 or less",
-          "Market share at or above 10% by year 3": "Share 10% or more", "Both of the above": "Both"}
+labels = {"All simulations": "Base case", "Courier cost at or below $9.00 per order": "Cheap couriers",
+          "Market share at or above 10% by year 3": "High market share", "Both of the above": "Both"}
+subs = {"All simulations": "today's assumptions", "Courier cost at or below $9.00 per order": "$9 or less per order",
+        "Market share at or above 10% by year 3": "10% or more by year 3", "Both of the above": "both conditions hold"}
 hi = list(w.condition).index("Courier cost at or below $9.00 per order")
 fig, ax = b.chart(height=4.2, label_in=1.75)
 b.hbar(ax, w.condition.map(labels).tolist(), (w.expected_npv / 1e6).tolist(), {hi},
-       lambda v: f"{'+' if v > 0 else '-'}${abs(v):.2f}M", HL)
-b.titles(fig, "Efficient courier operations turn Halifax from a loss to a gain",
-         "Expected five-year NPV of a Halifax launch, in the simulations where each condition holds")
+       lambda v: f"{'+' if v > 0 else '-'}${abs(v):.2f}M", HL,
+       sublabels=w.condition.map(subs).tolist())
+b.titles(fig, "Halifax only makes money if couriers cost $9 an order or less",
+         "Expected five-year value (NPV) of launching in Halifax, if each condition holds")
 b.credit(fig, SRC)
 b.save(fig, OUT / "02_what_has_to_be_true.png")
 print("Charts saved to charts/")

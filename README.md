@@ -38,7 +38,7 @@ streamlit run app.py
 
 ![Halifax is the only city with a real chance of paying back](charts/01_chance_of_payback_by_city.png)
 
-![Efficient courier operations turn Halifax from a loss to a gain](charts/02_what_has_to_be_true.png)
+![Halifax only makes money if couriers cost $9 an order or less](charts/02_what_has_to_be_true.png)
 
 ## Results
 
