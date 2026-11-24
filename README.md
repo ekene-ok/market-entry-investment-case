@@ -21,7 +21,7 @@ A delivery platform is considering entering Halifax, St. John's, Moncton, Saint 
 - **Break-even share is 9.4%** of local delivery orders by year 3 at the most likely values of every other input
 - **Sharing one operations team across the three New Brunswick cities helps but does not rescue them:** every plan that adds cities to Halifax lowers expected NPV
 
-The courier cost range comes from the companion [marketplace supply simulation](https://github.com/ekene-ok/marketplace-supply-simulation): a demand-shaped courier schedule costs about $8.18 per order, while a flat schedule costs $12.70. In other words, the operating model decides the investment case.
+The courier cost range comes from the companion [marketplace supply simulation](https://github.com/ekene-ok/marketplace-supply-simulation): a demand-shaped courier schedule costs about $8.18 per order at the minimum, or $8.79 with the buffer the simulation recommends against forecast error, while a flat schedule costs $12.70. Both shaped figures clear the $9 bar. In other words, the operating model decides the investment case.
 
 ## Try it yourself
 

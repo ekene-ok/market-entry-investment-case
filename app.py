@@ -13,7 +13,7 @@ import streamlit as st
 from model.investment_model import load, city_cash_flows, YEARS
 
 st.set_page_config(page_title="Market Entry Investment Case", layout="wide")
-HIGHLIGHT, CONTEXT, INK, INK2 = "#c94f86", "#d9d8d3", "#1a1a1a", "#6b6a66"
+HIGHLIGHT, CONTEXT, INK, INK2 = "#c94f86", "#c4c1ba", "#14213d", "#5f6470"
 N, SEED = 5_000, 7
 NB = ["Moncton, NB", "Saint John, NB", "Fredericton, NB"]
 
@@ -106,7 +106,7 @@ with left:
     for s in ["top", "right", "left"]:
         ax.spines[s].set_visible(False)
     ax.set_xlabel("Five-year NPV ($ millions)", color=INK2)
-    ax.set_title(f"{p_pos:.0%} of simulated outcomes pay back", loc="left", fontsize=13, fontweight="bold", color=INK)
+    ax.set_title(f"{p_pos:.0%} of simulated outcomes pay back", loc="left", fontsize=13, color=INK)
     st.pyplot(fig)
 
 # Chart 2: chance of payback for each city on its own, with current assumptions
@@ -118,15 +118,13 @@ with right:
     ax.barh([r[0] for r in rows], [r[1] * 100 for r in rows], height=0.55,
             color=[HIGHLIGHT if r[0] == best else CONTEXT for r in rows])
     for y, (c, v) in enumerate(rows):
-        ax.text(v * 100 + 1, y, f"{v:.0%}", va="center", color=INK if c == best else INK2,
-                fontweight="bold" if c == best else "normal")
+        ax.text(v * 100 + 1, y, f"{v:.0%}", va="center", color=INK if c == best else INK2)
     ax.set_xticks([])
     ax.set_xlim(0, 115)
     for s in ax.spines.values():
         s.set_visible(False)
     ax.tick_params(axis="y", length=0)
-    ax.set_title(f"{best.split(',')[0]} has the best odds on its own", loc="left", fontsize=13,
-                 fontweight="bold", color=INK)
+    ax.set_title(f"{best.split(',')[0]} has the best odds on its own", loc="left", fontsize=13, color=INK)
     st.pyplot(fig)
 
 # Most likely case cash flows for the plan
