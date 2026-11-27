@@ -1,8 +1,39 @@
 # Market Entry Investment Case: Should a Delivery Platform Launch in Atlantic Canada?
 
-**[Try the live app](https://ekene-market-entry.streamlit.app/)**: change the assumptions and see the results update.
+**In one line:** launch in Halifax only, and only once delivery costs can be kept to about $9 per order or less.
 
-A five-year investment case for launching a food delivery platform in Atlantic Canada's five largest cities. It sizes each market from public data, builds city-level unit economics, runs 10,000 Monte Carlo simulations to show the range of outcomes, and identifies what has to be true for the launch to pay back.
+**[Try the live app](https://ekene-market-entry.streamlit.app/)**: change the assumptions and see the answer update.
+
+A food delivery company is considering launching in Atlantic Canada's five largest cities. I built a five-year business case for each city from public data. Then I ran it 10,000 times with different realistic assumptions (orders, prices, costs) to see the full range of outcomes, rather than a single forecast.
+
+## What I found
+
+- **Halifax is the only city with a real chance of paying back:** 36%, against 15% or less for the others
+- **Even Halifax loses money on average under today's assumptions** (about $0.72M over five years), mainly because delivery costs can run much higher than planned
+- **Delivery cost is the deciding factor.** When couriers cost $9 per order or less, Halifax turns positive (+$0.51M), and more so with a bigger market share (+$1.33M)
+- **Winning more customers alone isn't enough** without keeping delivery costs down
+
+![Halifax is the only city with a real chance of paying back](charts/01_chance_of_payback_by_city.png)
+
+**How to read it:** each bar is the share of the 10,000 runs in which a city's launch paid back within five years.
+
+![Halifax only makes money if couriers cost $9 an order or less](charts/02_what_has_to_be_true.png)
+
+## What I'd do
+
+1. Don't launch across the region
+2. Launch Halifax once courier costs can be held near $9 per order; the companion [courier simulation](https://github.com/ekene-ok/marketplace-supply-simulation) shows a schedule that does this at $8.79
+3. Revisit the other cities only after Halifax proves the model
+
+## Words used here
+
+- **Pays back:** the launch earns more than it costs over five years, counting money received later as worth a little less (net present value, or NPV)
+- **Simulation:** re-running the plan thousands of times with different realistic assumptions to see the range of results
+
+<details>
+<summary><b>The full analysis: method, detail and how to run it</b> (for technical readers)</summary>
+
+## Tools and data
 
 Built in **Python** (NumPy, pandas). Every assumption lives in one editable file, [`model/assumptions.csv`](model/assumptions.csv), with a low, most likely and high value and its basis.
 
@@ -35,10 +66,6 @@ streamlit run app.py
 ```
 
 ## Charts
-
-![Halifax is the only city with a real chance of paying back](charts/01_chance_of_payback_by_city.png)
-
-![Halifax only makes money if couriers cost $9 an order or less](charts/02_what_has_to_be_true.png)
 
 ## Results
 
@@ -143,3 +170,5 @@ Change any value in `model/assumptions.csv` and rerun to test your own view.
 ## Licence
 
 MIT. Public data is cited above; all other inputs are labelled assumptions.
+
+</details>
